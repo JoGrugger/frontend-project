@@ -11,5 +11,19 @@ export default {
 		extend: {}
 	},
 
-	plugins: [typography, forms, containerQueries, aspectRatio, require('daisyui')]
+	plugins: [typography, forms, containerQueries, aspectRatio, require('daisyui')],
+	daisyui: {
+		themes: [
+			{
+				mytheme: {
+					primary: '#D8DB2F',
+					secondary: '#00253e',
+					accent: '#37cdbe',
+					neutral: '#3d4451',
+					'base-100': '#ffffff'
+				}
+			},
+			'light'
+		]
+	}
 };
