@@ -1,8 +1,8 @@
 <script>
-	let loanAmount = $state(0);
-	let interestRate = $state(0);
-	let years = $state(0);
-	let mortgageType = $state('repayment');
+	let loanAmount = $state(null);
+	let interestRate = $state(null);
+	let years = $state(null);
+	let mortgageType = $state(null);
 	let monthlyPayment = $state(null);
 
 	function calculateMortgage(event) {
@@ -19,10 +19,10 @@
 	}
 
 	function resetForm() {
-		loanAmount = 0;
-		interestRate = 0;
-		years = 0;
-		mortgageType = 'repayment';
+		loanAmount = null;
+		interestRate = null;
+		years = null;
+		mortgageType = null;
 		monthlyPayment = null;
 	}
 </script>
@@ -62,15 +62,18 @@
 
 					<div class="flex-1 form-control">
 						<p class="text-gray-600">Interest Rate</p>
-						<div class="flex items-center gap-2">
+						<div class="flex items-center">
 							<input
 								type="number"
 								step="0.01"
-								class="w-full border-gray-300"
-								placeholder="Interest Rate (%)"
+								class="w-full border-gray-300 rounded-l-lg bg-white p-2"
 								bind:value={interestRate}
 							/>
-							<span class="text-gray-500" style="background-color: #E3F4FC;">%</span>
+							<div
+								class="bg-blue-100 border border-blue-300 text-blue-900 px-4 py-2 rounded-r-lg flex items-center font-semibold"
+							>
+								%
+							</div>
 						</div>
 					</div>
 				</div>
