@@ -27,6 +27,13 @@
 	}
 </script>
 
+<svelte:head>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Jakarta+Sans:wght@400;500;600&display=swap"
+		rel="stylesheet"
+	/>
+</svelte:head>
+
 <div class="bg-blue-50 min-h-screen flex justify-center items-center">
 	<div
 		class="bg-white shadow-xl rounded-lg max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 overflow-hidden"
