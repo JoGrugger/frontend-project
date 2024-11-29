@@ -46,9 +46,17 @@
 				<div class="flex gap-4">
 					<div class="flex-1 form-control">
 						<p class="text-gray-600">Mortgage Term</p>
-						<div class="flex items-center gap-2">
-							<input type="number" class="w-full border-gray-300" bind:value={years} />
-							<span class="text-gray-500">years</span>
+						<div class="flex items-center">
+							<input
+								type="number"
+								class="w-full border-gray-300 rounded-l-lg bg-white p-2"
+								bind:value={years}
+							/>
+							<div
+								class="bg-blue-100 border border-blue-300 text-blue-900 px-4 py-2 rounded-r-lg flex items-center font-semibold"
+							>
+								years
+							</div>
 						</div>
 					</div>
 
