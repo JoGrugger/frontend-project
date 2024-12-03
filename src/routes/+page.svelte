@@ -196,13 +196,19 @@
 					<div class="p-6 bg-gray-800 rounded-lg">
 						<p class="text-gray-300 text-sm">Your monthly repayments</p>
 						<p class="text-5xl font-bold text-yellow-400 mt-2">
-							€{monthlyPayment.toLocaleString('de-DE')}
+							€{monthlyPayment.toLocaleString('de-DE', {
+								minimumFractionDigits: 2,
+								maximumFractionDigits: 2
+							})}
 						</p>
 					</div>
 					<div class="p-6 mt-4 bg-gray-700 rounded-lg">
 						<p class="text-sm text-gray-300">Total you'll repay over the term</p>
 						<p class="text-xl font-semibold text-gray-50 mt-2">
-							€{(monthlyPayment * years * 12).toLocaleString('de-DE')}
+							€{(monthlyPayment * years * 12).toLocaleString('de-DE', {
+								minimumFractionDigits: 2,
+								maximumFractionDigits: 2
+							})}
 						</p>
 					</div>
 				</div>
