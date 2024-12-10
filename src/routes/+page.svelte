@@ -52,27 +52,9 @@
 	}
 </script>
 
-<svelte:head>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Jakarta+Sans:wght@400;500;600&display=swap"
-		rel="stylesheet"
-	/>
-
-	<style>
-		body {
-			font-family: 'Jakarta Sans', sans-serif;
-		}
-		.error {
-			color: red;
-			font-size: 0.875rem;
-			margin-top: 0.25rem;
-		}
-	</style>
-</svelte:head>
-
 <div class="bg-blue-50 min-h-screen flex justify-center items-center">
 	<div
-		class="bg-white shadow-xl rounded-lg max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 overflow-hidden"
+		class="bg-white shadow-xl rounded-lg max-w-4xl grid grid-cols-1 md:grid-cols-2 overflow-hidden"
 	>
 		<div class="p-8">
 			<div class="flex justify-between items-center">
@@ -168,7 +150,11 @@
 					{/if}
 				</div>
 
-				<button type="submit" class="btn w-full mt-4" style="background-color: #D9DB30;">
+				<button
+					type="submit"
+					class="btn w-full mt-4 rounded-full"
+					style="background-color: #D9DB30;"
+				>
 					<img
 						src="/assets/images/icon-calculator.svg"
 						alt="Calculator"
@@ -206,7 +192,6 @@
 						<p class="text-sm text-gray-300">Total you'll repay over the term</p>
 						<p class="text-xl font-semibold text-gray-50 mt-2">
 							€{(monthlyPayment * years * 12).toLocaleString('de-DE', {
-								minimumFractionDigits: 2,
 								maximumFractionDigits: 2
 							})}
 						</p>
