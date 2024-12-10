@@ -128,21 +128,23 @@
 					<div class="flex gap-4 mt-2">
 						<span class="cursor-pointer flex items-center gap-2">
 							<input
+								id="repayment"
 								type="radio"
 								value="repayment"
 								class="radio radio-primary"
 								bind:group={mortgageType}
 							/>
-							<span>Repayment</span>
+							<label for="repayment">Repayment</label>
 						</span>
 						<span class="cursor-pointer flex items-center gap-2">
 							<input
+								id="interestOnly"
 								type="radio"
 								value="interest-only"
 								class="radio radio-primary"
 								bind:group={mortgageType}
 							/>
-							<span>Interest Only</span>
+							<label for="interestOnly">Interest only</label>
 						</span>
 					</div>
 					{#if errors.mortgageType}
