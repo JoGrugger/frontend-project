@@ -91,6 +91,8 @@
 								type="number"
 								class="w-full border-gray-300 rounded-l-lg bg-white p-2"
 								bind:value={years}
+								min="1"
+								max="50"
 							/>
 							<div
 								class="bg-blue-100 border border-blue-300 text-blue-900 px-4 py-2 rounded-r-lg flex items-center"
@@ -168,7 +170,7 @@
 		</div>
 
 		<div
-			class="bg p-8 flex flex-col justify-center items-center text-white"
+			class="bg p-8 flex flex-col justify-center items-center text-white rounded-bl-[7rem]"
 			style="background-color: #133040;"
 		>
 			{#if monthlyPayment === null}
